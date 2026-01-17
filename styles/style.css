@@ -18,7 +18,7 @@
   background-size: cover;
 }
 
-.content{
+.content {
   background-color: #ffffff;
 }
 
@@ -87,7 +87,7 @@
   margin-top: 20px;
 }
 
-.card{
+.card {
   box-sizing: content-box;
 }
 
@@ -372,7 +372,6 @@
   mix-blend-mode: difference;
 }
 
-
 @supports (-webkit-text-stroke: 1px var(--label-stroke-color)) {
   .card__label {
     -webkit-text-stroke: 0.5px var(--label-stroke-color);
@@ -417,44 +416,40 @@
 .dialog {
   position: fixed;
   inset: 0;
+  margin: auto;
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-inline-size: 90vw;
+  max-block-size: 90vh;
+  z-index: 1000;
   display: none;
+}
+
+.dialog__toggle:checked ~ .dialog {
+  display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
 }
 
 .dialog__backdrop {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.75);
-  display: none;
-}
-
-.dialog__toggle:checked ~ .dialog {
-  display: flex;
-}
-
-.dialog__toggle:checked ~ .dialog .dialog__backdrop {
-  display: block;
+  z-index: 999;
 }
 
 .dialog__content {
   position: relative;
   z-index: 1001;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  min-inline-size: 353px;
-  min-block-size: 191px;
-  padding: 30px;
   border: 2px solid var(--Themes-mainColor, #000000);
+  padding: 30px;
   background: var(--Themes-background, #FFFFFF);
-}
-
-.dialog__toggle:checked ~ .dialog .dialog__content {
-  display: flex;
 }
 
 .dialog__message {
@@ -525,13 +520,5 @@
 }
 
 .dialog__button .button__text {
-  position: relative;
-  z-index: 1;
-  font-family: var(--font-accent);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 90%;
-  letter-spacing: 0;
   text-transform: uppercase;
 }
