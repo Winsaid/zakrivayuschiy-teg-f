@@ -1,1 +1,0 @@
-https://winsaid.github.io/zakrivayuschiy-teg-f https://github.com/winsaid/zakrivayuschiy-teg-f
